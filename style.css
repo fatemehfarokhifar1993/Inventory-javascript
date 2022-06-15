@@ -1,0 +1,222 @@
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 100%;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color:#2A272A ;
+    font-family:sans-serif;
+    font-size: 1.2rem;
+    overflow-x: hidden;
+}
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color:#82A0AA;
+    font-weight: bold;
+}
+header span,.product-quantity{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px; 
+    padding: 0.1rem;
+    color:#4B4A54;
+}
+section{
+    max-width: 1400px;
+    width:90%;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    background-color:  #A3CFCD;
+    border-radius: 5px;
+}
+section h3{
+    width: 100%;
+    text-align: center;
+    border-bottom: solid 2px#4B4A54;
+}
+form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.category,.new-product{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0.7rem auto;
+}
+.new-product-category,.sort,#category-title,#category-description,#new-product-title,#search-input,#new-product-quantity,select,.search{
+    width: 87%;
+    padding: 0.3rem 0.8rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+}
+#category-description{
+    resize: none;
+    height:7rem;
+}
+.category-btn{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+}
+button{
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(0deg, #677381 50%,#82A0AA 100%);
+}
+button:hover {
+    color:#A3CFCD;
+    box-shadow:none;
+}
+.add-new-category{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+#toggle-add-category{
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color:#4B4A54;
+    background: linear-gradient(0deg, #fff 0%, #82A0AA 100%);
+}
+
+#toggle-add-category:hover{
+    background: linear-gradient(0deg, #82A0AA 0%,#fff 100%);
+    color: #2A272A;
+}
+.new-product-quantity,.new-product-category{
+    border: solid 1px #677381;
+    padding: 0.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem;
+    border-radius: 5px;
+}
+.search-sort{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.search,.sort{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.5rem;
+    border-radius: 5px;
+    border: solid 1px#4B4A54;
+}
+.products-list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.product{
+    border: solid 2px #82A0AA;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0.3rem 0.7rem;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr 0.2fr  0.2fr ;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    column-gap: 15px;
+}
+
+.product-delete{
+    background: none;
+    background-color: #fff;
+    color: rgb(249, 17, 17);
+} 
+.product-delete:hover{
+    color: #fff;
+    background-color: rgb(249, 17, 17);
+}   
+@media screen and (max-width:900px) {
+html{
+    font-size: 80%;
+}
+.new-product{
+    flex-direction: column;
+}
+.search-sort{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+.search,.sort{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.product {
+    padding:15px;
+    grid-template-areas:
+    "title .  .  .  delete"
+    "date . quantity . category"
+    ;
+    row-gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+.product-title {
+    grid-area: title;
+}
+.product-delete {
+    grid-area: delete;
+
+}
+.product-quantity {
+    grid-area: quantity;
+}
+
+.product-date {
+    grid-area: date;
+}
+.product-category {
+    grid-area: category;
+}
+}
