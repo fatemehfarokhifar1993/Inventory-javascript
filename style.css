@@ -99,12 +99,14 @@ button:hover {
     color:#A3CFCD;
     box-shadow:none;
 }
-.add-new-category{
-    width: 100%;
+ .add-new-category{
+    margin: 1.5rem auto;
     display: flex;
     align-items: center;
     justify-content: end;
-}
+    max-width: 1400px;
+    width:90%;
+} 
 #toggle-add-category{
     padding: 0.5rem 1rem;
     border-radius: 5px;
@@ -165,12 +167,12 @@ button:hover {
     column-gap: 15px;
 }
 
-.product-delete{
+.delete-product{
     background: none;
     background-color: #fff;
     color: rgb(249, 17, 17);
 } 
-.product-delete:hover{
+.delete-product:hover{
     color: #fff;
     background-color: rgb(249, 17, 17);
 }   
@@ -205,7 +207,7 @@ html{
 .product-title {
     grid-area: title;
 }
-.product-delete {
+.delete-product {
     grid-area: delete;
 
 }
@@ -219,4 +221,7 @@ html{
 .product-category {
     grid-area: category;
 }
+}
+#category-wrapper{
+display: none;
 }
